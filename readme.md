@@ -20,7 +20,7 @@ First clone this repository to your box and have pre-requsites installed.
 
 ```
    $ cd vagrant-ubuntu-docker
-   $ git clone git://github.com/ansible/ansible.git
+   $ git clone git://github.com/ansible/ansible.git --recursive
    $ source ansible/hacking/env-setup
    $ vagrant up
    $ vagrant ssh
@@ -35,5 +35,4 @@ Ongoing updates to changes in git repo
    $ source ansible/hacking/env-setup
    $ vagrant provision / vagrant reload (port changes)
 ```
-
 
