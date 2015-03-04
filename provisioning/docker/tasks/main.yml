@@ -4,9 +4,9 @@
 - lineinfile: dest=/etc/resolv.conf regexp='^nameserver 8\.8\.8\.8' line='nameserver 8.8.8.8'
   
 - name: Install docker
-  action: apt pkg=docker.io state=installed
+  action: apt pkg=docker state=installed
   notify: Restart Docker
 
 - name: install docker-py
-  pip: name=docker-py version=0.3.1
+  pip: name=docker-py 
 

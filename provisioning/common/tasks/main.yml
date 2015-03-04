@@ -1,4 +1,8 @@
 ---
+
+- name: Postgres key
+  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+
 - name: Upgrade apt package cache
   apt: update_cache=yes
 
@@ -33,5 +37,5 @@
   apt: name=fail2ban state=installed
 
 - name: Install postgres-client
-  apt: name=postgresql-client-9.4 state=installed
+  apt: name=postgresql-client state=installed
 
