@@ -1,0 +1,37 @@
+---
+- name: Upgrade apt package cache
+  action: apt update_cache=yes
+
+- name: Upgrade apt packages
+  action: apt upgrade=safe
+
+- name: Install ntp
+  action: apt pkg=ntp state=installed
+
+- name: Install vim
+  action: apt pkg=vim state=installed
+ 
+- name: Install emacs
+  action: apt pkg=emacs state=installed
+ 
+- name: Install python and tools
+  apt: name=python-pip state=installed
+ 
+- name: Install python dev
+  apt: name=python-dev state=installed
+ 
+- name: Install git
+  apt: name=git state=installed
+ 
+- name: Install ansible
+  apt: name=ansible state=installed
+ 
+- name: Install node.js
+  apt: name=nodejs-legacy state=installed
+ 
+- name: Install fail2ban
+  action: apt pkg=fail2ban state=installed
+
+- name: Install postgres-client
+  action: apt pkg=postgresql-client-9.4 state=installed
+

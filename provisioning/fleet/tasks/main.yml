@@ -1,0 +1,16 @@
+---
+- name: get fleet repos
+  git: repo=https://github.com/openmason/{{item}}.git dest=/home/{{deploy_user}}/{{item}}
+  with_items:
+    - fleet-base  
+    - fleet-nginx
+    - fleet-postgis
+
+- name: build fleet images
+  command: docker build -t openmason/{{item}} /home/{{deploy_user}}/{{item}}
+  sudo: True
+  with_items:
+    - fleet-base  
+    - fleet-nginx
+    - fleet-postgis
+
