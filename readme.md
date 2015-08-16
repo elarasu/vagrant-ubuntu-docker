@@ -35,4 +35,16 @@ Ongoing updates to changes in git repo
    $ source ansible/hacking/env-setup
    $ vagrant provision / vagrant reload (port changes)
 ```
+# pending
 
+## docker upgrade
+```
+   sudo sh -c "wget -qO- https://get.docker.io/gpg | apt-key add -"
+   sudo sh -c "echo deb http://get.docker.io/ubuntu docker main\ > /etc/apt/sources.list.d/docker.list"
+   sudo aptitude update
+   sudo aptitude install lxc-docker
+```
+### docker-compose install
+```
+   sudo pip install -U docker-compose
+```
