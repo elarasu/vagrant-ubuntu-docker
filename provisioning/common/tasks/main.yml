@@ -12,9 +12,6 @@
 - name: Install vim
   apt: name=vim state=installed
  
-- name: Install emacs
-  apt: name=emacs state=installed
- 
 - name: Install python and tools
   apt: name=python-pip state=installed
  
@@ -33,32 +30,8 @@
 - name: Install fail2ban
   apt: name=fail2ban state=installed
 
-- name: Postgres key
-  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present validate_certs=no
-
-- name: Install postgres-client
-  apt: name=postgresql-client state=installed
-
-- name: Install libpq-dev
-  apt: name=libpq-dev state=installed 
-
-- name: Install libffi-dev
-  apt: name=libffi-dev state=installed 
-
 - name: Install binutils
   apt: name=binutils state=installed 
-
-- name: Install libproj-dev
-  apt: name=libproj-dev state=installed 
-
-- name: Install gdal-bin
-  apt: name=gdal-bin state=installed 
-
-- name: Install libgeoip1
-  apt: name=libgeoip1 state=installed 
-
-- name: Install python-gdal
-  apt: name=python-gdal state=installed 
 
 - name: Install virtualenv
   pip: name=virtualenv

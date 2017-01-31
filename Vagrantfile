@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/xenial64"
   config.vm.hostname = "devbox"
 
   # Disable automatic box update checking. If you disable this, then
@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Setting VM name and increasing RAM size
     v.customize [
       "modifyvm", :id,
-      "--memory", "2048",
+      "--memory", "4048",
       "--name", "devbox"
     ]
     # Boot with a GUI so you can see the screen. (Default is headless)
